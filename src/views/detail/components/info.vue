@@ -207,7 +207,7 @@
 <script setup>
 import { ref } from "vue";
 import Line from "./line.vue";
-const showDialog = ref(true);
+const showDialog = ref(false);
 const active = ref(1);
 const checked = ref([])
 const menuList = ref([

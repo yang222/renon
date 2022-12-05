@@ -1,16 +1,16 @@
 <template>
-    <div class="w-full flex justify-between items-center bg-white">
-        <p class="text-sm text-black">Showing {{(pageIndex-1)*10+1}} to {{pageIndex*10}} of {{total}} entries </p>
+    <div v-if="total" class="w-full flex justify-between items-center bg-white">
+        <p class="text-sm text-black">Showing {{(pageIndex-1)*10+1}} to {{total <= 10?total:pageIndex*10}} of {{total}} entries </p>
         <div class="text-xs text-black flex items-center">
-            <el-pagination page-size="10" :total="total" class="mr-2" :pager-count="5" @current-change="handleCurrentChange" layout="prev, pager, next" />
+            <el-pagination  :current-page.sync="pageIndex" page-size="10"  :total="total" class="mr-2" :pager-count="5" @current-change="handleCurrentChange" layout="prev, pager, next" />
             <div class="flex items-center">
-                 Jump to <input  v-model="pageNo" @blur="pageChange"  class="w-[50px] h-[30px] border border-gray-500 text-center rounded-md mx-2 outline-none" min="1" max="4" type="number" autocomplete="off" tabindex="0" id="el-id-4912-492">Pg
+                 Jump to <input @keyup.enter="handleCurrentChange(pageNo)"  v-model="pageNo" @blur="pageChange"  class="w-[50px] h-[30px] border border-gray-500 text-center rounded-md mx-2 outline-none" min="1" max="4" type="number" autocomplete="off" tabindex="0" id="el-id-4912-492">Pg
             </div>
         </div>
     </div>
 </template>
 <script setup>
-import { ref } from "vue";
+import { ref,onMounted } from "vue";
 
 const emits = defineEmits(['CurrentChange']);
  const props = defineProps({
@@ -38,6 +38,11 @@ const emits = defineEmits(['CurrentChange']);
  const handleCurrentChange =(page)=>{
     emits('CurrentChange',page);
  }
+ onMounted(()=>{
+    document.addEventListener("onkeydown",function(e){
+        console.log(e)
+    })
+ })
 </script>
 <style lang="scss">
 .el-pagination{

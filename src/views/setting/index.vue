@@ -1,273 +1,130 @@
 <template>
-    <div>
-       <div class="flex gap-4">
-            <div class="py-3 bg-white rounded-lg  flex-1 px-8">
-                <h2 class="font-bold text-black text-3xl mb-8">Control</h2>
-                <div class="">
-                    
-                    <el-form
-                        label-position="top"
-                        label-width="100px"
-                        :model="formLabelAlign"
-                    >
-                        <div class="flex gap-6">
-                            <div class="flex-1">
-                                <el-form-item label="Operating Mode">
-                                    <el-select v-model="value" class="m-2" placeholder="-- Select an option --" size="large">
-                                        <el-option label="Operating" value="1"/>
-                                    </el-select>
-                                </el-form-item>
-                                <el-form-item label="Reset">
-                                    <el-select v-model="value" class="m-2" placeholder="-- Select an option --" size="large">
-                                        <el-option label="Reboot" value="1"/>
-                                    </el-select>
-                                </el-form-item>
-                                <el-form-item label="Clear">
-                                    <el-select v-model="value" class="m-2" placeholder="-- Select an option --" size="large">
-                                        <el-option label="Reboot" value="1"/>
-                                    </el-select>
-                                </el-form-item>
-                                <el-form-item label="Force Charger State">
-                                    <el-select v-model="form.name" class="m-2" placeholder="-- Select an option --" size="large">
-                                        <el-option label="Reboot" value="1"/>
-                                    </el-select>
-                                </el-form-item>
-                                <el-form-item label="Auxiliary Output Control">
-                                    <el-select v-model="form.name" class="m-2" placeholder="-- Select an option --" size="large">
-                                        <el-option label="Reboot" value="1"/>
-                                    </el-select>
-                                </el-form-item>
-                                <el-form-item label="Refresh Configuration Data">
-                                    <el-select v-model="form.name" class="m-2" placeholder="-- Select an option --" size="large">
-                                        <el-option label="Reboot" value="1"/>
-                                    </el-select>
-                                </el-form-item>
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex justify-between items-center h-[48px] mb-4">
-                                    <p class="text-xs text-black">Backup Mode</p>
-                                    <el-switch v-model="form.name" style="--el-switch-on-color: #13ce66;" />
-                                </div>
-                                <div class="flex justify-between items-center h-[48px] mb-4">
-                                    <p class="text-xs text-black">Sell Enable/Disable</p>
-                                    <el-switch v-model="form.name" style="--el-switch-on-color: #13ce66;" />
-                                </div>
-                                <div class="flex justify-between items-center h-[48px] mb-4">
-                                    <p class="text-xs text-black">Backup Mode</p>
-                                    <el-switch v-model="form.name" style="--el-switch-on-color: #13ce66;" />
-                                </div>
-                                <div class="flex justify-between items-center h-[48px] mb-4">
-                                    <p class="text-xs text-black">Sell Enable/Disable</p>
-                                    <el-switch v-model="form.name" style="--el-switch-on-color: #13ce66;" />
-                                </div>
-                            </div>
-                        </div>
-                      
-                    </el-form>
-                    
-                </div>
-            </div>
-            <div class="py-3 bg-white rounded-lg flex-1  px-8">
-                <h2 class="font-bold text-black text-3xl mb-8">Inverter</h2>
-                <div class="">
-                    
-                    <el-form
-                        label-position="top"
-                        label-width="100px"
-                        :model="formLabelAlign"
-                        style="max-width: 460px"
-                    >
-                        <div class="flex gap-6">
-                            <div class="flex-1">
-                                <div class="flex justify-between items-center h-[48px] mb-4">
-                                    <p class="text-xs text-black">AC Coupling</p>
-                                    <el-switch v-model="form.name" style="--el-switch-on-color: #13ce66;" />
-                                </div>
-                                <div class="flex justify-between items-center h-[48px] mb-4">
-                                    <p class="text-xs text-black">Search Mode Enable</p>
-                                    <el-switch v-model="form.name" style="--el-switch-on-color: #13ce66;" />
-                                </div>
-                                <div class="flex justify-between items-center h-[48px] mb-4">
-                                    <p class="text-xs text-black">AC Coupling</p>
-                                    <div class="flex items-center">
-                                        <el-input-number v-model="num2" class="mx-4" />
-                                        <span class="text-black text-xs leading-5 ml-2">W</span>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center h-[48px] mb-4">
-                                    <p class="text-xs text-black">Search Mode Enable</p>
-                                    <div class="flex items-center">
-                                        <el-input-number v-model="num2" class="mx-4" />
-                                        <span class="text-black text-xs leading-5 ml-2">S</span>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center h-[48px] mb-4">
-                                    <p class="text-xs text-black">Recharge Voltage</p>
-                                    <div class="flex items-center">
-                                        <input placeholder="00:00" type="text" class="mr-1 outline-none text-xs border h-5 border-[#000] rounded-md px-1 w-[60px]">
-                                        <img src="@/assets/images/icon/clock.png" class="w-[14px]" alt="">
-                                    </div>
-                                </div>
-                                
-                                <el-form-item label="Force Charger State">
-                                    <el-select v-model="value" class="m-2" placeholder="-- Select an option --" size="large">
-                                        <el-option label="Reboot" value="1"/>
-                                    </el-select>
-                                </el-form-item>
-                                <el-form-item label="Auxiliary Output Control">
-                                    <el-select v-model="value" class="m-2" placeholder="-- Select an option --" size="large">
-                                        <el-option label="Reboot" value="1"/>
-                                    </el-select>
-                                </el-form-item>
-                                <el-form-item label="Refresh Configuration Data">
-                                    <el-select v-model="form.name" class="m-2" placeholder="-- Select an option --" size="large">
-                                        <el-option label="Reboot" value="1"/>
-                                    </el-select>
-                                </el-form-item>
-                                
-                            </div>
-                            <div class="flex-1">
-                                <div class="flex justify-between items-center h-[48px] mb-4">
-                                    <p class="text-xs text-black">Search Mode Enable</p>
-                                    <div class="flex items-center">
-                                        <el-input-number v-model="num2" class="mx-4" />
-                                        <span class="text-black text-xs leading-5 ml-2">S</span>
-                                    </div>
-                                </div>
-                                <div class="flex justify-between items-center h-[48px] mb-4">
-                                    <p class="text-xs text-black">Recharge Voltage</p>
-                                    <div class="flex items-center">
-                                        <input placeholder="00:00" type="text" class="mr-1 outline-none text-xs border h-5 border-[#000] rounded-md px-1 w-[60px]">
-                                        <img src="@/assets/images/icon/clock.png" class="w-[14px]" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                      
-                    </el-form>
-                    
-                </div>
-            </div>
-       </div>
-       <div class="py-3 bg-white mt-4 rounded-lg  flex-1 px-8">
-            <h2 class="font-bold text-black text-3xl mb-8">Battery</h2>
-            <el-form
-                label-position="top"
-                label-width="100px"
-                :model="formLabelAlign"
-            >
-                <div class="flex gap-6 flex-wrap">
-                    <div class="w-[300px]">
-                        <el-form-item label="Operating Mode">
-                            <el-select v-model="value" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Operating" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="Reset">
-                            <el-select v-model="value" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Reboot" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="Clear">
-                            <el-select v-model="value" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Reboot" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="Force Charger State">
-                            <el-select v-model="form.name" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Reboot" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="Auxiliary Output Control">
-                            <el-select v-model="form.name" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Reboot" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="Refresh Configuration Data">
-                            <el-select v-model="form.name" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Reboot" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                    </div>
-                     <div class="w-[300px]">
-                        <el-form-item label="Operating Mode">
-                            <el-select v-model="value" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Operating" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="Reset">
-                            <el-select v-model="value" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Reboot" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="Clear">
-                            <el-select v-model="value" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Reboot" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="Force Charger State">
-                            <el-select v-model="form.name" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Reboot" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="Auxiliary Output Control">
-                            <el-select v-model="form.name" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Reboot" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                        <el-form-item label="Refresh Configuration Data">
-                            <el-select v-model="form.name" class="m-2" placeholder="-- Select an option --" size="large">
-                                <el-option label="Reboot" value="1"/>
-                            </el-select>
-                        </el-form-item>
-                    </div>
-                    <div class="w-[300px]">
-                        <div class="flex justify-between items-center h-[48px] mb-4">
-                            <p class="text-xs text-black">AC Coupling</p>
-                            <el-switch v-model="form.name" style="--el-switch-on-color: #13ce66;" />
-                        </div>
-                        <div class="flex justify-between items-center h-[48px] mb-4">
-                            <p class="text-xs text-black">Search Mode Enable</p>
-                            <el-switch v-model="form.name" style="--el-switch-on-color: #13ce66;" />
-                        </div>
-                        <div class="flex justify-between items-center h-[48px] mb-4">
-                            <p class="text-xs text-black">AC Coupling</p>
-                            <div class="flex items-center">
-                                <el-input-number v-model="num2" class="mx-4" />
-                                <span class="text-black text-xs leading-5 ml-2">W</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center h-[48px] mb-4">
-                            <p class="text-xs text-black">Search Mode Enable</p>
-                            <div class="flex items-center">
-                                <el-input-number v-model="num2" class="mx-4" />
-                                <span class="text-black text-xs leading-5 ml-2">S</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center h-[48px] mb-4">
-                            <p class="text-xs text-black">Recharge Voltage</p>
-                            <div class="flex items-center">
-                                <input placeholder="00:00" type="text" class="mr-1 outline-none text-xs border h-5 border-[#000] rounded-md px-1 w-[60px]">
-                                <img src="@/assets/images/icon/clock.png" class="w-[14px]" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    
-                  
-                </div>
-                
-            </el-form>
-
-       </div>
+  <div>
+    <div class="p-5 bg-white rounded-lg mb-3 flex items-center">
+      <div>
+        <el-select
+            class="w-[200px]"
+            v-model="state.devid"
+            placeholder="DevId"
+            @change="devChange"
+            size="large"
+        >
+            <el-option
+            v-for="(item, index) in state.devList"
+            :key="index"
+            :label="item.devname"
+            :value="item.devid"
+            />
+        </el-select>
+        <button
+            class="bg-[#000] ml-2 text-white text-sm px-6 rounded-md hover:shadow-xl h-10"
+        >
+            Search
+        </button>
+      </div>
+      <ul v-if="state.devid" class="bg-[#F6F9FC] rounded-lg p-1 ml-3 flex gap-3">
+          <li
+            :class="`text-black rounded-lg text-xs font-bold w-[120px] h-p leading-9 text-center cursor-pointer ${
+              state.activeType == item.type ? 'bg-white shadow-button2' : 'hover:underline'
+            }`"
+            v-for="(item, index) in state.navList"
+            :key="index"
+            @click="typeChange(item)"
+          >
+            {{ item.title }}
+          </li>
+        </ul>
     </div>
+    <Master ref="masterRef" />
+  </div>
 </template>
 <script setup>
-import { reactive } from "vue";
+import { reactive ,ref} from "vue";
+import { Devices } from "@/api";
+import Master from "./components/master.vue"
+import { usePermissStore } from "@/store/permiss"
 
+const store = usePermissStore();
 const form = reactive({
-    name:"",
-})
-</script>
-<style lang="scss" scoped>
+  name: "",
+});
+const masterRef = ref();
+const navList = [
+    {
+        title:"Master",
+        type:"master",
+        typeArr:['ME_AC','ME_DC','HE_BAT','HE_ALLINONE']
+    },
+     {
+        title:"Inverter",
+        type:"inverter",
+        typeArr:['HE_ALLINONE']
+    },
+     {
+        title:"DCDCIN",
+        type:'dcdcin',
+        typeArr:['ME_AC','ME_DC']
+    },
+     {
+        title:"DCDCOUT",
+        type:'dcdcout',
+        typeArr:['ME_DC']
+    },
+    {
+        title:"PCS",
+        type:'pcs',
+        typeArr:['ME_AC']
+    }
+  ]
+const state = reactive({
+  devList: [],
+  devid: "",
+  activeType:"",
+  devInfo:{},
+  navList:[]
+});
+//获取设备列表
+const getDevList = () => {
+  Devices({
+    skip: 0,
+    limit: 999,
+    filter: {
+     desc: { $regex: localStorage.getItem("account"), $options: "i" },
+      $or: [
+        { parents: localStorage.getItem("account") },
+        { subusers: localStorage.getItem("account") },
+      ],
+    },
+  }).then((res) => {
+    state.devList = res.data;
+    if(store.devInfo.devid){
+        navChange(store.devInfo);
+    }else{
+        navChange(res.data[0]);
+    }
+    
+  });
+};
+getDevList();
+const typeChange = (item)=>{
+    state.activeType = item.type;
+    masterRef.value.loadData(state.devInfo,state.activeType);
+}
+const navChange  = (item)=>{
+    console.log(item)
+    state.devid = item.devid;
+    state.devInfo = item;
+    state.navList = navList.filter(ele=>ele.typeArr.includes(item.devtype))
+    if(state.navList.length){
+        state.activeType = state.navList[0].type;
+    }
+    masterRef.value.loadData(state.devInfo,state.activeType);
+}
+const devChange = (item)=>{
+    console.log(item,'item')
+    const obj  = state.devList.find((ele)=>ele.devid == item)
 
-</style>
+    navChange(obj);
+}
+</script>
+<style lang="scss" scoped></style>

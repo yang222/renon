@@ -1,12 +1,15 @@
 <template>
-  <div class="sidebar h-full">
+  <div class="sidebar h-full pb-10">
     <div class="pt-6 text-center">
       <img
         src="@/assets/images/logo.png"
         class="w-[50%] block mx-auto"
         alt=""
       />
-      <p class="text-black text-[15px] my-3 font-bold leading-6">End User</p>
+      <p class="text-black text-[15px] my-3 font-bold leading-6" v-if="role==4">End User</p>
+      <p class="text-black text-[15px] my-3 font-bold leading-6" v-if="role==3">Installer</p>
+      <p class="text-black text-[15px] my-3 font-bold leading-6" v-if="role==1">Agent I</p>
+      <p class="text-black text-[15px] my-3 font-bold leading-6" v-if="role==2">Agent II</p>
       <img src="@/assets/images/icon/line.png" class="block mx-auto" alt="" />
     </div>
     <ul class="pr-4 mt-9">
@@ -57,8 +60,10 @@ import Icon from "@/assets/images/icon/Icon.png";
 import Icon1 from "@/assets/images/icon/Icon1.png";
 import Icon2 from "@/assets/images/icon/Icon2.png";
 import Icon3 from "@/assets/images/icon/Icon3.png";
+import { getUserInfo,getRoleId } from "@/utils/data";
 
 const routes = useRoute();
+const role =  getRoleId()
 let sideData = [
   {
     icon: Icon,
@@ -81,6 +86,11 @@ let sideData = [
     permiss: "2",
     collapse: false,
     subs: [
+       {
+          index: "/device-list",
+          title: "Device List",
+          permiss: "3",
+        },
       {
         index: "/event",
         title: "Event",
@@ -114,7 +124,7 @@ let sideData = [
   },
 ];
 
-if (localStorage.getItem("user_type") == 'agent') {
+if (role == 3) {
   sideData = [
     {
       icon: Icon,
@@ -131,7 +141,7 @@ if (localStorage.getItem("user_type") == 'agent') {
       collapse: false,
       subs: [
         {
-          index: "/event",
+          index: "/device",
           title: "Monitoring Device",
           permiss: "3",
         },
@@ -159,10 +169,17 @@ if (localStorage.getItem("user_type") == 'agent') {
     },
     {
       icon: Icon3,
-      index: "/management",
+      index: "4",
       title: "User Management",
       permiss: "2",
       collapse: false,
+      subs:[
+         {
+          index: "/user-management",
+          title: "End-User Management",
+          permiss: "3",
+        },
+      ]
     },
     {
       icon: Icon2,
@@ -179,7 +196,7 @@ if (localStorage.getItem("user_type") == 'agent') {
       ],
     },
   ];
-}else if (localStorage.getItem("user_type") == 'installer') {
+}else if (role == 1 || role  == 2) {
   sideData = [
     {
       icon: Icon,
@@ -230,8 +247,8 @@ if (localStorage.getItem("user_type") == 'agent') {
       collapse: false,
 		subs: [
         {
-          index: "/user-management",
-          title: "End-User Management",
+          index: "/management",
+          title: "User Management",
           permiss: "3",
         },
       ],
@@ -272,7 +289,6 @@ const jump = (item) => {
 };
 const handleItem = () => {
   items.value.forEach((item) => {
-	console.log(item);
 	if(item.subs){
 		let obj = item.subs.find((item2) => route.path.indexOf(item2.index) > -1);
 		if (obj) {
@@ -306,9 +322,7 @@ onMounted(()=>{
 .sidebar-el-menu:not(.el-menu--collapse) {
   width: 250px;
 }
-.sidebar > ul {
-  height: 100%;
-}
+
 .el-sub-menu {
   display: block !important;
 }

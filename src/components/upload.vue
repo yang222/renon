@@ -36,6 +36,9 @@ const beforeAvatarUpload = (rawFile) => {
   return true
 }
 </script>
-<style lang="scss" scoped>
-
+<style lang="scss">
+.el-upload{
+  width: 100% !important;
+  height: 100% !important;
+}
 </style>

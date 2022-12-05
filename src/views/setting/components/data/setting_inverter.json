@@ -1,0 +1,681 @@
+{
+  "data": {
+    "I_reset": {
+      "nickname": "I_reset",
+      "show_frontend": true,
+      "type": "object",
+      "properties": {
+        "I_Rengclr": {
+          "nickname": "I_Rengclr",
+          "comment": "电量及运行时间清零",
+          "minLength": 0,
+          "maxLength": 1,
+          "type": "switch",
+          "format": "int",
+          "max": 1,
+          "min": 0,
+          "properties": ""
+        },
+        "I_Rfaultclr": {
+          "nickname": "I_Rfaultclr",
+          "comment": "清除故障记录",
+          "minLength": 0,
+          "maxLength": 1,
+          "type": "switch",
+          "format": "int",
+          "max": 1,
+          "min": 0,
+          "properties": ""
+        }
+      }
+    },
+    "I_funcen": {
+      "nickname": "I_funcen",
+      "minLength": 0,
+      "maxLength": 1,
+      "show_frontend": true,
+      "type": "object",
+      "properties": {
+        "I_Feps": {
+          "nickname": "I_Feps",
+          "comment": "离网模式使能",
+          "minLength": 0,
+          "maxLength": 1,
+          "type": "switch",
+          "format": "int",
+          "max": 1,
+          "min": 0,
+          "properties": ""
+        },
+        "I_Fovfload": {
+          "nickname": "I_Fovfload",
+          "comment": "过频降载使能",
+          "minLength": 0,
+          "maxLength": 1,
+          "type": "switch",
+          "format": "int",
+          "max": 1,
+          "min": 0,
+          "properties": ""
+        },
+        "I_Fdrms": {
+          "nickname": "I_Fdrms",
+          "comment": "DRMS使能",
+          "minLength": 0,
+          "maxLength": 1,
+          "type": "switch",
+          "format": "int",
+          "max": 1,
+          "min": 0,
+          "properties": ""
+        },
+        "I_Facchg": {
+          "nickname": "I_Facchg",
+          "comment": "AC充电使能",
+          "minLength": 0,
+          "maxLength": 1,
+          "type": "switch",
+          "format": "int",
+          "max": 1,
+          "min": 0,
+          "properties": ""
+        }
+      }
+    },
+    "I_startpvv": {
+      "nickname": "I_startpvv",
+      "comment": "PV工作起始电压，AC储能无此变量",
+      "minLength": 900,
+      "maxLength": 5000,
+      "show_frontend": true,
+      "type": "number",
+      "format": "float",
+      "max": 5000,
+      "min": 900,
+      "unit": "V",
+      "properties": {
+      }
+    },
+    "I_conntime": {
+      "nickname": "I_conntime",
+      "comment": "并网等待时间",
+      "minLength": 30,
+      "maxLength": 600,
+      "show_frontend": true,
+      "type": "number",
+      "format": "int",
+      "max": 600,
+      "min": 30,
+      "unit": "s",
+      "properties": {
+      }
+    },
+    "I_reconntime": {
+      "nickname": "I_reconntime",
+      "comment": "重新并网等待时间",
+      "minLength": 0,
+      "maxLength": 900,
+      "show_frontend": true,
+      "type": "number",
+      "format": "int",
+      "max": 900,
+      "min": 0,
+      "unit": "s",
+      "properties": {
+      }
+    },
+    "I_chgpowper": {
+      "nickname": "I_chgpowper",
+      "comment": "充电功率百分比设定",
+      "minLength": 0,
+      "maxLength": 100,
+      "show_frontend": true,
+      "type": "number",
+      "format": "int",
+      "max": 100,
+      "min": 0,
+      "unit": "%",
+      "properties": {
+      }
+    },
+    "I_dchgpowper": {
+      "nickname": "I_dchgpowper",
+      "comment": "放电功率百分比设定",
+      "minLength": 0,
+      "maxLength": 100,
+      "show_frontend": true,
+      "type": "number",
+      "format": "int",
+      "max": 100,
+      "min": 0,
+      "unit": "%",
+      "properties": {
+      }
+    },
+    "I_acchg": {
+      "nickname": "I_acchg",
+      "show_frontend": true,
+      "type": "object",
+      "properties": {
+        "I_Achgpow": {
+          "nickname": "I_Achgpow",
+          "comment": "AC充电百分比设定",
+          "minLength": 0,
+          "maxLength": 100,
+          "type": "number",
+          "format": "int",
+          "max": 100,
+          "min": 0,
+          "unit": "%",
+          "properties": ""
+        },
+        "I_Achgsoc": {
+          "nickname": "I_Achgsoc",
+          "comment": "AC充电SOC限值设定",
+          "minLength": 0,
+          "maxLength": 100,
+          "type": "number",
+          "format": "int",
+          "max": 100,
+          "min": 0,
+          "unit": "%",
+          "properties": ""
+        },
+        "I_Achgstarth": {
+          "nickname": "I_Achgstarth",
+          "comment": "AC充电起始时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "unit": "hour",
+          "properties": ""
+        },
+        "I_Achgstartm": {
+          "nickname": "I_Achgstartm",
+          "comment": "AC充电起始时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "unit": "min",
+          "properties": ""
+        },
+        "I_Achgendh": {
+          "nickname": "I_Achgendh",
+          "comment": "AC充电结束时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "unit": "hour",
+          "properties": ""
+        },
+        "I_Achgendm": {
+          "nickname": "I_Achgendm",
+          "comment": "AC充电结束时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Achgstarth1": {
+          "nickname": "I_Achgstarth1",
+          "comment": "AC充电起始时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "unit": "hour",
+          "properties": ""
+        },
+        "I_Achgstartm1": {
+          "nickname": "I_Achgstartm1",
+          "comment": "AC充电起始时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Achgendh1": {
+          "nickname": "I_Achgendh1",
+          "comment": "AC充电结束时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Achgendm1": {
+          "nickname": "I_Achgendm1",
+          "comment": "AC充电结束时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Achgstarth2": {
+          "nickname": "I_Achgstarth2",
+          "comment": "AC充电起始时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Achgstartm2": {
+          "nickname": "I_Achgstartm2",
+          "comment": "AC充电起始时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "unit": "min",
+          "properties": ""
+        },
+        "I_Achgendh2": {
+          "nickname": "I_Achgendh2",
+          "comment": "AC充电结束时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Achgendm2": {
+          "nickname": "I_Achgendm2",
+          "comment": "AC充电结束时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        }
+      }
+    },
+    "I_chgfirst": {
+      "nickname": "I_chgfirst",
+      "show_frontend": true,
+      "type": "object",
+      "properties": {
+        "I_Fchgpow": {
+          "nickname": "I_Fchgpow",
+          "comment": "充电优先百分比设定",
+          "minLength": 0,
+          "maxLength": 100,
+          "type": "number",
+          "format": "int",
+          "max": 100,
+          "min": 0,
+          "unit": "%",
+          "properties": ""
+        },
+        "I_Fchgsoc": {
+          "nickname": "I_Fchgsoc",
+          "comment": "充电优先SOC限值设定",
+          "minLength": 0,
+          "maxLength": 100,
+          "type": "number",
+          "format": "int",
+          "max": 100,
+          "min": 0,
+          "unit": "%",
+          "properties": ""
+        },
+        "I_Fchgstarth": {
+          "nickname": "I_Fchgstarth",
+          "comment": "充电优先起始时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fchgstartm": {
+          "nickname": "I_Fchgstartm",
+          "comment": "充电优先起始时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Fchgendh": {
+          "nickname": "I_Fchgendh",
+          "comment": "充电优先结束时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fchgendm": {
+          "nickname": "I_Fchgendm",
+          "comment": "充电优先结束时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Fchgstarth1": {
+          "nickname": "I_Fchgstarth1",
+          "comment": "充电优先起始时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fchgstartm1": {
+          "nickname": "I_Fchgstartm1",
+          "comment": "充电优先起始时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Fchgendh1": {
+          "nickname": "I_Fchgendh1",
+          "comment": "充电优先结束时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fchgendm1": {
+          "nickname": "I_Fchgendm1",
+          "comment": "充电优先结束时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Fchgstarth2": {
+          "nickname": "I_Fchgstarth2",
+          "comment": "充电优先起始时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fchgstartm2": {
+          "nickname": "I_Fchgstartm2",
+          "comment": "充电优先起始时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Fchgendh2": {
+          "nickname": "I_Fchgendh2",
+          "comment": "充电优先结束时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fchgendm2": {
+          "nickname": "I_Fchgendm2",
+          "comment": "充电优先结束时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        }
+      }
+    },
+    "I_forceddchg": {
+      "nickname": "I_forceddchg",
+      "show_frontend": true,
+      "type": "object",
+      "properties": {
+        "I_Fdchgpow": {
+          "nickname": "I_Fdchgpow",
+          "comment": "强制放电百分比设定",
+          "minLength": 0,
+          "maxLength": 100,
+          "type": "number",
+          "format": "int",
+          "max": 100,
+          "min": 0,
+          "properties": "",
+          "unit": "%"
+        },
+        "I_Fdchgsoc": {
+          "nickname": "I_Fdchgsoc",
+          "comment": "强制放电SOC限值设定",
+          "minLength": 0,
+          "maxLength": 100,
+          "type": "number",
+          "format": "int",
+          "max": 100,
+          "min": 0,
+          "properties": "",
+          "unit": "%"
+        },
+        "I_Fdchgstarth": {
+          "nickname": "I_Fdchgstarth",
+          "comment": "强制放电起始时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fdchgstartm": {
+          "nickname": "I_Fdchgstartm",
+          "comment": "强制放电起始时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Fdchgendh": {
+          "nickname": "I_Fdchgendh",
+          "comment": "强制放电结束时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fdchgendm": {
+          "nickname": "I_Fdchgendm",
+          "comment": "强制放电结束时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Fdchgstarth1": {
+          "nickname": "I_Fdchgstarth1",
+          "comment": "强制放电起始时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fdchgstartm1": {
+          "nickname": "I_Fdchgstartm1",
+          "comment": "强制放电起始时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Fdchgendh1": {
+          "nickname": "I_Fdchgendh1",
+          "comment": "强制放电结束时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fdchgendm1": {
+          "nickname": "I_Fdchgendm1",
+          "comment": "强制放电结束时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Fdchgstarth2": {
+          "nickname": "I_Fdchgstarth2",
+          "comment": "强制放电起始时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fdchgstartm2": {
+          "nickname": "I_Fdchgstartm2",
+          "comment": "强制放电起始时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        },
+        "I_Fdchgendh2": {
+          "nickname": "I_Fdchgendh2",
+          "comment": "强制放电结束时间_小时设置",
+          "minLength": 0,
+          "maxLength": 23,
+          "type": "number",
+          "format": "int",
+          "max": 23,
+          "min": 0,
+          "properties": "",
+          "unit": "hour"
+        },
+        "I_Fdchgendm2": {
+          "nickname": "I_Fdchgendm2",
+          "comment": "强制放电结束时间_分钟设置",
+          "minLength": 0,
+          "maxLength": 59,
+          "type": "number",
+          "format": "int",
+          "max": 59,
+          "min": 0,
+          "properties": "",
+          "unit": "min"
+        }
+      }
+    }
+  }
+}

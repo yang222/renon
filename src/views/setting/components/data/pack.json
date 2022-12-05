@@ -1,0 +1,1017 @@
+{
+
+  "PTcellov": {
+    "nickname": "Cell Over Voltage",
+    "comment": "单体过压",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTcellvoi": {
+        "nickname": "Cell OV Alarm",
+        "comment": "单体过压告警",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 3.5,
+        "min": 3.25,
+        "ratio":0.001,
+        "unit": "V",
+        "properties": ""
+      },
+      "PTcellvoir": {
+        "nickname": "Cell OV Alarm Rev",
+        "comment": "单体过压告警恢复",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 3.50,
+        "min": 3.15,
+        "ratio":0.001,
+        "unit": "V",
+        "properties": ""
+      },
+      "PTcellvoii": {
+        "nickname": "Cell OV Protection",
+        "comment": "单体过压保护",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 3.7,
+        "min": 3.5,
+        "ratio":0.001,
+        "unit": "V",
+        "properties": ""
+      },
+      "PTcellvoiir": {
+        "nickname": "Cell OV Protection Rev",
+        "comment": "单体过压保护恢复",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 3.50,
+        "min": 3.15,
+        "ratio":0.001,
+        "unit": "V",
+        "properties": ""
+      },
+      "PTcellvot": {
+        "nickname": "Cell OV Cfm time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 1,
+        "unit": "S",
+        "properties": ""
+      }
+    }
+  },
+  "PTcellvu": {
+    "nickname": "Cell Low Voltage",
+    "comment": "单体欠压",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTcellvui": {
+        "nickname": "Cell LV Alarm",
+        "comment": "单体欠压告警",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 3.1,
+        "min": 2.9,
+        "ratio":0.001,
+        "unit": "V",
+        "properties": ""
+      },
+      "PTcellvuir": {
+        "nickname": "Cell LV Alarm Rev",
+        "comment": "单体欠压告警恢复",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 3.15,
+        "min": 2.95,
+        "ratio":0.001,
+        "unit": "V",
+        "properties": ""
+      },
+      "PTcellvuii": {
+        "nickname": "Cell LV Protection",
+        "comment": "单体欠压保护",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 2.9,
+        "min": 2.7,
+        "ratio":0.001,
+        "unit": "V",
+        "properties": ""
+      },
+      "PTcellvuiir": {
+        "nickname": "Cell LV Protection Rev",
+        "comment": "单体欠压保护恢复",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 3.15,
+        "min": 2.95,
+        "ratio":0.001,
+        "unit": "V",
+        "properties": ""
+      },
+      "PTcellvut": {
+        "nickname": "Cell LV Cfm time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 1,
+        "role": [1,2,3],
+        "unit": "S"
+      }
+    }
+  },
+  "PTcellvd": {
+    "nickname": "Voltage  Difference",
+    "comment": "压差过大",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTcellvdi": {
+        "nickname": "Volt Diff Alarm",
+        "comment": "压差过大告警",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 300,
+        "min": 100,
+        "unit": "mV",
+        "properties": ""
+      },
+      "PTcellvdir": {
+        "nickname": "Volt Diff  Alarm Rev",
+        "comment": "压差过大告警恢复",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 200,
+        "min": 100,
+        "unit": "mV",
+        "properties": ""
+      },
+      "PTcellvdii": {
+        "nickname": "Volt Diff Protection",
+        "comment": "压差过大保护",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 500,
+        "min": 300,
+        "unit": "mV",
+        "properties": ""
+      },
+      "PTcellvdiir": {
+        "nickname": "Volt Diff  Protection Rev",
+        "comment": "压差过大保护恢复",
+        "minLength": 0,
+        "maxLength": 5000,
+        "type": "number",
+        "format": "int",
+        "max": 200,
+        "min": 100,
+        "unit": "mV",
+        "properties": ""
+      },
+      "PTcellvdt": {
+        "nickname": "Volt Diff  Cfm time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 1,
+        "role": [1,2,3],
+        "properties": ""
+      }
+    }
+  },
+  "PTtvo": {
+    "nickname": "Total  Voltage",
+    "comment": "总压过高",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTtvoi": {
+        "nickname": "Total OV Alarm",
+        "comment": "总压过高告警",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 56,
+        "min": 52,
+        "ratio":0.001,
+        "unit": "V",
+        "role": [1,2,3]
+      },
+      "PTtvoir": {
+        "nickname": "Total OV Alarm Rev",
+        "comment": "总压过高告警恢复",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 56,
+        "min": 50,
+        "role": [1,2,3]
+      },
+      "PTtvoii": {
+        "nickname": "Total OV Protection",
+        "comment": "总压过高保护",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 59.2,
+        "min": 56,
+        "ratio":0.001,
+        "unit": "V",
+        "role": [1,2,3]
+      },
+      "PTtvoiir": {
+        "nickname": "Total OV Protection Rev",
+        "comment": "总压过高保护恢复",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 56,
+        "min": 50,
+        "ratio":0.001,
+        "unit": "V",
+        "role": [1,2,3]
+      },
+      "PTtvot": {
+        "nickname": "Total OV Cfm time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 1,
+        "role": [1,2,3],
+        "unit": "S"
+      }
+    }
+  },
+  "PTtvu": {
+    "nickname": "Total Low Voltage",
+    "comment": "总压过低",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTtvui": {
+        "nickname": "Total LV Alarm",
+        "comment": "总压过低告警",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 50,
+        "min": 46,
+        "ratio":0.001,
+        "unit": "V"
+      },
+      "PTtvuir": {
+        "nickname": "Total LV Alarm Rev",
+        "comment": "总压过低告警恢复",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 51,
+        "min": 47,
+        "ratio":0.001,
+        "unit": "V"
+      },
+      "PTtvuii": {
+        "nickname": "Total LV Protection",
+        "comment": "总压过低保护",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 46,
+        "min": 43.2,
+        "ratio":0.001,
+        "unit": "V"
+      },
+      "PTtvuiir": {
+        "nickname": "Total LV Protection Rev",
+        "comment": "总压过低保护恢复",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 51,
+        "min":47,
+        "ratio":0.001,
+        "unit": "V"
+      },
+      "PTtvut": {
+        "nickname": "Total LV Cfm time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 1,
+        "unit": "S"
+      }
+    }
+  },
+  "PTtempco": {
+    "nickname": "Charge Over Temperature",
+    "comment": "充电温度过高",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTtempcoi": {
+        "nickname": "Chg OT Alarm Rev",
+        "comment": "充电温度过高告警",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 52,
+        "min": 45,
+        "unit": "℃"
+      },
+      "PTtempcor": {
+        "nickname": "Chg OT Alarm Rev",
+        "comment": "充电温度过高告警恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max":50,
+        "min": 45,
+        "unit": "℃"
+      },
+      "PTtempcoii": {
+        "nickname": "Chg OT Protection",
+        "comment": "充电温度过高保护",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 55,
+        "min": 50,
+        "unit": "℃"
+      },
+      "PTtempcoiir": {
+        "nickname": "Chg OT Protection",
+        "comment": "充电温度过高保护恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 53,
+        "min": 48,
+        "unit": "℃"
+      },
+      "PTtempcot": {
+        "nickname": "Chg OT Cfm time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 1,
+        "unit": "S"
+      }
+    }
+  },
+  "PTtempcu": {
+    "nickname": "Charge Low Temperature",
+    "comment": "电池温度过低",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTtempcui": {
+        "nickname": "Chg LT Alarm",
+        "comment": "电池温度过低告警",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 0,
+        "unit": "℃"
+      },
+      "PTtempcur": {
+        "nickname": "Chg LT Alarm Rev",
+        "comment": "电池温度过低告警恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min":4,
+        "unit": "℃"
+      },
+      "PTtempcuii": {
+        "nickname": "Chg LT Protection",
+        "comment": "电池温度过低保护",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 5,
+        "min": 0,
+        "unit": "℃"
+      },
+      "PTtempcuiir": {
+        "nickname": "Chg LT Protection Rev",
+        "comment": "电池温度过低保护恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max":10,
+        "min": 4,
+        "unit": "℃"
+      },
+      "PTtempcut": {
+        "nickname": "Chg LT Cfm time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max":10,
+        "min": 1,
+        "unit": "S"
+      }
+    }
+  },
+  "PTtempdo": {
+    "nickname": "Dhg OT Alarm",
+    "comment": "放电温度过高",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTtempdoi": {
+        "nickname": "Dhg OT Alarm",
+        "comment": "放电温度过高告警",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 52,
+        "min": 45,
+        "unit": "℃"
+      },
+      "PTtempdor": {
+        "nickname": "Dhg OT Alarm Rev",
+        "comment": "放电温度过高告警恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 50,
+        "min": 45,
+        "unit": "℃"
+      },
+      "PTtempdoii": {
+        "nickname": "Dhg OT Protection",
+        "comment": "放电温度过高保护",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 55,
+        "min":50,
+        "unit": "℃"
+      },
+      "PTtempdoiir": {
+        "nickname": "Dhg OT Protection Rev",
+        "comment": "放电温度过高保护恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 53,
+        "min": 48,
+        "unit": "℃"
+      },
+      "PTtempdot": {
+        "nickname": "Dhg OT cfm Time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 1,
+        "unit": "S"
+      }
+    }
+  },
+  "PTtempdu": {
+    "nickname": "Dhg LT",
+    "comment": "放电温度过低",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTtempdui": {
+        "nickname": "Dhg LT Alarm",
+        "comment": "放电温度过低告警",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": -5,
+        "min": -15,
+        "unit": "℃"
+      },
+      "PTtempdur": {
+        "nickname": "Dhg LT  Alarm Rev",
+        "comment": "放电温度过低告警恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": -5,
+        "min": -13,
+        "unit": "℃"
+      },
+      "PTtempduii": {
+        "nickname": "Dhg LT Protection",
+        "comment": "放电温度过低保护",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": -10,
+        "min": -20,
+        "unit": "℃"
+      },
+      "PTtempduiir": {
+        "nickname": "Dhg LT Protection Rev",
+        "comment": "放电温度过低保护恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": -5,
+        "min": -15,
+        "unit": "℃"
+      },
+      "PTtempdut": {
+        "nickname": "Dhg LT Cfm time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 1,
+        "unit": "S"
+      }
+    }
+  },
+  "PTtempeo": {
+    "nickname": "Ambient Over Voltage",
+    "comment": "环境温度过高",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTtempeoi": {
+        "nickname": "Amb OT Alarm",
+        "comment": "环境温度过高告警",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 52,
+        "min": 45,
+        "unit": "℃"
+      },
+      "PTtempeor": {
+        "nickname": "Amb OT Alarm Rev",
+        "comment": "环境温度过高告警恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 50,
+        "min": 45,
+        "unit": "℃"
+      },
+      "PTtempeoii": {
+        "nickname": "Amb OT Protection",
+        "comment": "环境温度过高保护",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 55,
+        "min": 50,
+        "unit": "℃"
+      },
+      "PTtempeoiir": {
+        "nickname": "Amb OT Protection Rev",
+        "comment": "环境温度过高保护恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 50,
+        "min": 45,
+        "unit": "℃"
+      },
+      "PTtempeot": {
+        "nickname": "Amb OT  cfm  Time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 1,
+        "unit": "S"
+      }
+    }
+  },
+  "PTtempeu": {
+    "nickname": "Ambient Low Voltage",
+    "comment": "环境温度过低",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTtempeui": {
+        "nickname": "Amb LT Alarm",
+        "comment": "环境温度过低告警",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 0,
+        "unit": "℃"
+      },
+      "PTtempeur": {
+        "nickname": "Amb LT  Alarm Rev",
+        "comment": "环境温度过低告警恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 0,
+        "unit": "℃"
+      },
+      "PTtempeuii": {
+        "nickname": "Amb LT Protection",
+        "comment": "环境温度过低保护",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 0,
+        "unit": "℃"
+      },
+      "PTtempeuiir": {
+        "nickname": "Amb LT Protection Rev",
+        "comment": "环境温度过低保护恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min":0,
+        "unit": "℃"
+      },
+      "PTtempeut": {
+        "nickname": "Amb LT cfm  Time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min":1,
+        "unit": "S"
+      }
+    }
+  },
+  "PTtempmo": {
+    "nickname": "MOS Over Temperature",
+    "comment": "Mos(j继电器)温度过高",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTtempmoi": {
+        "nickname": "MOS OT Alarm",
+        "comment": "Mos(j继电器)温度过高告警",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 110,
+        "min": 100,
+        "unit": "℃"
+      },
+      "PTtempmor": {
+        "nickname": "MOS OT Alarm Rev",
+        "comment": "Mos(j继电器)温度过高告警恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 105,
+        "min":95,
+        "unit": "℃"
+      },
+      "PTtempmoii": {
+        "nickname": "MOS OT Protection",
+        "comment": "Mos(j继电器)温度过高保护",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 125,
+        "min": 115,
+        "unit": "℃"
+      },
+      "PTtempmoiir": {
+        "nickname": "MOS OT Protection Rev",
+        "comment": "Mos(j继电器)温度过高保护恢复",
+        "minLength": -50,
+        "maxLength": 200,
+        "type": "number",
+        "format": "float",
+        "max": 105,
+        "min": 95,
+        "unit": "℃"
+      },
+      "PTtempmot": {
+        "nickname": "MOS OT cfm time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 1,
+        "unit": "S"
+      }
+    }
+  },
+  "PTsocu": {
+    "nickname": "Low SOC",
+    "comment": "SOC过低",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTsocui": {
+        "nickname": "Low SOC Alarm",
+        "comment": "SOC过低告警",
+        "minLength": 0,
+        "maxLength": 100,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 0,
+        "unit": "%"
+      },
+      "PTsocuir": {
+        "nickname": "Low SOC Alarm Rev",
+        "comment": "SOC过低告警恢复",
+        "minLength": 0,
+        "maxLength": 100,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 0,
+        "unit": "%"
+      },
+      "PTsocuii": {
+        "nickname": "Low SOC Protection",
+        "comment": "SOC过低保护",
+        "minLength": 0,
+        "maxLength": 100,
+        "type": "number",
+        "format": "float",
+        "max": 5,
+        "min": 0,
+        "unit": "%"
+      },
+      "PTsocuiir": {
+        "nickname": "Low SOC Protection Rev",
+        "comment": "SOC过低保护恢复",
+        "minLength": 0,
+        "maxLength": 100,
+        "type": "number",
+        "format": "float",
+        "max": 5,
+        "min": 0,
+        "unit": "%"
+      },
+      "PTsoct": {
+        "nickname": "Low SOC cfm Time",
+        "comment": "确认时间",
+        "minLength": 0,
+        "maxLength": 100,
+        "type": "number",
+        "format": "float",
+        "max": 10,
+        "min": 1,
+        "unit": "S"
+      }
+    }
+  },
+  "PTcurch": {
+    "nickname": "Charge Over Current",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTcurcha": {
+        "nickname": "Chg OT Alarm",
+        "comment": "充电过流告警",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 0.9,
+        "min": 0.8,
+        "unit": "C"
+      },
+      "PTcurchar": {
+        "nickname": "Chg OT Alarm Rev",
+        "comment": "充电过流告警解除",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max":0.85,
+        "min": 0.75,
+        "unit": "C"
+      },
+      "PTcurchf1": {
+        "nickname": "PTcurchf1",
+        "comment": "充电过流保护1",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max":1.1,
+        "min":1,
+        "unit": "C"
+      },
+      "PTcurchf1dt": {
+        "nickname": "PTcurchf1dt",
+        "comment": "充电过流保护1确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 0.85,
+        "min": 0.75,
+        "unit": "C"
+      },
+      "PTcurchkpt": {
+        "nickname": "PTcurchkpt",
+        "comment": "充电过流保持时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max":10,
+        "min": 1,
+        "unit": "S"
+      }
+    }
+  },
+  "PTcurdh": {
+    "nickname": "Discharge Over Current",
+    "show_frontend": true,
+    "type": "object",
+    "role": [1,2,3],
+    "properties": {
+      "PTcurdha": {
+        "nickname": "Dhg OC Alarm",
+        "comment": "放电过流告警",
+        "minLength": -6553.5,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 0.9,
+        "min": 0.8,
+        "unit": "C"
+      },
+      "PTcurdhar": {
+        "nickname": "Dhg OC Alarm Rev",
+        "comment": "放电过流告警解除",
+        "minLength": -6553.5,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max":0.85,
+        "min": 0.75,
+        "unit": "C"
+      },
+      "PTcurdhf1": {
+        "nickname": "Dhg OC Protrction 1",
+        "comment": "放电过流保护1",
+        "minLength": -6553.5,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 1.1,
+        "min": 1,
+        "unit": "C"
+      },
+      "PTcurdhf1dt": {
+        "nickname": "Dhg OC Protrction 1 Cfm T",
+        "comment": "放电过流保护1确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 20,
+        "min": 10,
+        "unit": "S"
+      },
+      "PTcurdhf2": {
+        "nickname": "Dhg OC Protrction 2",
+        "comment": "放电过流保护2",
+        "minLength": -6553.5,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 1.1,
+        "min": 1,
+        "unit": "C"
+      },
+      "PTcurdhf2dt": {
+        "nickname": "Dhg OC Protrction 1 Cfm T",
+        "comment": "放电过流保护2确认时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "max": 20,
+        "min": 10,
+        "unit": "S"
+      },
+      "PTcurdhkpt": {
+        "nickname": "Dhg OC Hold Time",
+        "comment": "放电过流保持时间",
+        "minLength": 0,
+        "maxLength": 6553.5,
+        "type": "number",
+        "format": "float",
+        "min": 10,
+        "max": 20,
+        "unit": "S"
+      }
+    }
+  }
+}

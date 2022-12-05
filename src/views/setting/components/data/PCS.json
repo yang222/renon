@@ -1,0 +1,269 @@
+{
+  "PC_offgrid": {
+    "nickname": "PC_offgrid",
+    "comment": "并离网模式: 0-并网, 1-离网",
+    "minLength": 0,
+    "maxLength": 1,
+    "enums": ["0", "1"],
+    "enumNames": ["并网", "离网"],
+    "show_frontend": true,
+    "type": "select",
+    "format": "int",
+    "max": 1,
+    "min": 0,
+    "properties": {},
+    "list":[
+      { "value":"0","label":"Grid-tied"},
+      { "value":"1","label":"Off-grid"}
+    ]
+  },
+  "PC_engschd": {
+    "nickname": "PC_engschd",
+    "comment": "能量调度模式: 0-交流调度,1-直流调度,2-支路调度(有功)",
+    "minLength": 0,
+    "maxLength": 2,
+    "enums": ["0", "1", "2"],
+    "enumNames": ["交流调度", "直流调度", "支路调度"],
+    "show_frontend": true,
+    "type": "select",
+    "format": "int",
+    "max": 2,
+    "min": 0,
+    "properties": {},
+    "list":[
+      { "value":"0","label":"AC dispatching"},
+      { "value":"1","label":"DC dispatching"},
+      { "value":"2","label":":String dispatching"}
+    ]
+  },
+  "PC_starway": {
+    "nickname": "PC_starway",
+    "comment": "启动方式: 0-自动开机,1-手,动开机",
+    "minLength": 0,
+    "maxLength": 1,
+    "enums": ["0", "1"],
+    "enumNames": ["自动开机", "手动开机"],
+    "show_frontend": true,
+    "type": "select",
+    "format": "int",
+    "max": 1,
+    "min": 0,
+    "properties": {},
+    "list":[
+      { "value":"0","label":"Atuo startup"},
+      { "value":"1","label":"Manual startup"}
+    ]
+  },
+  "PC_repowctl": {
+    "nickname": "PC_repowctl",
+    "comment": "无功控制模式(无功优先): 0恒PF控制, 1-恒无功功率控制,2-电压/无功调节, 3-PF曲线控制",
+    "minLength": 0,
+    "maxLength": 3,
+    "enums": ["0", "1", "2", "3"],
+    "enumNames": ["恒PF控制", "恒无功功率控制", "电压/无功调节", "PF曲线控制"],
+    "show_frontend": true,
+    "type": "select",
+    "format": "int",
+    "max": 3,
+    "min": 0,
+    "properties": {},
+    "list":[
+      { "value":"0","label":"Constant PF control"},
+      { "value":"1","label":"Constant reactive power control"},
+      { "value":"2","label":"Voltage/reactive power regulation"},
+      { "value":"3","label":"PF curve control"}
+    ]
+  },
+  "PC_powchange": {
+    "nickname": "PC_powchange",
+    "comment": "功率变化模式: 0-阶跃,1-斜率",
+    "minLength": 0,
+    "maxLength": 1,
+    "enums": ["0", "1"],
+    "enumNames": ["阶跃", "斜率"],
+    "show_frontend": true,
+    "type": "select",
+    "format": "int",
+    "max": 1,
+    "min": 0,
+    "properties": {},
+    "list":[
+      { "value":"0","label":"step"},
+      { "value":"1","label":"ramp"}
+    ]
+  },
+  "PC_recdlay": {
+    "nickname": "PC_recdlay",
+    "comment": "电网恢复延时",
+    "minLength": 0,
+    "maxLength": 600,
+    "show_frontend": true,
+    "type": "number",
+    "format": "int",
+    "max": 1000,
+    "min": 0,
+    "properties": {}
+  },
+  "PC_dcctrl": {
+    "nickname": "PC_dcctrl",
+    "comment": "直流支路1:直流控制模式:0-设置电流调节, 1-设置功率调节",
+    "minLength": 0,
+    "maxLength": 1,
+    "enums": ["0", "1"],
+    "enumNames": ["设置电流调节", "设置功率调节"],
+    "show_frontend": true,
+    "type": "select",
+    "format": "int",
+    "max": 1,
+    "min": 0,
+    "properties": {},
+    "list":[
+      { "value":"0","label":"Fixed current"},
+      { "value":"1","label":"Fixed Tpower"}
+    ]
+  },
+  "PC_dccur": {
+    "nickname": "PC_dccur",
+    "comment": "直流支路1:直流电流设置",
+    "minLength": 0,
+    "maxLength": 500,
+    "show_frontend": true,
+    "type": "number",
+    "format": "float",
+    "max": 500,
+    "min": 0,
+    "properties": {}
+  },
+  "PC_dcpow": {
+    "nickname": "PC_dcpow",
+    "comment": "直流支路1:直流功率设置",
+    "minLength": 0,
+    "maxLength": 500,
+    "show_frontend": true,
+    "type": "number",
+    "format": "float",
+    "max": 500,
+    "min": 0,
+    "properties": {}
+  },
+  "PC_dcvol": {
+    "nickname": "PC_dcvol",
+    "comment": "直流支路1:直流下限电压",
+    "minLength": 200,
+    "maxLength": 300,
+    "show_frontend": true,
+    "type": "number",
+    "format": "float",
+    "max": 300,
+    "min": 200,
+    "properties": {}
+  },
+  "PC_dcdchgtmvol": {
+    "nickname": "PC_dcdchgtmvol",
+    "comment": "直流支路1:放电终止电压",
+    "minLength": 0,
+    "maxLength": 1000,
+    "show_frontend": true,
+    "type": "number",
+    "format": "float",
+    "max": 1000,
+    "min": 0,
+    "properties": {}
+  },
+  "PC_dceqchgvol": {
+    "nickname": "PC_dceqchgvol",
+    "comment": "直流支路1:均充电压",
+    "minLength": 30,
+    "maxLength": 800,
+    "show_frontend": true,
+    "type": "number",
+    "format": "float",
+    "max": 1000,
+    "min": 0,
+    "properties": {}
+  },
+  "PC_dcchgcutcur": {
+    "nickname": "PC_dcchgcutcur",
+    "comment": "直流支路1:充电截止电流",
+    "minLength": 0,
+    "maxLength": 10,
+    "show_frontend": true,
+    "type": "number",
+    "format": "float",
+    "max": 10,
+    "min": 0,
+    "properties": {}
+  },
+  "PC_dcmaxchgcur": {
+    "nickname": "PC_dcmaxchgcur",
+    "comment": "直流支路1:最大充电电流",
+    "minLength": 0,
+    "maxLength": 500,
+    "show_frontend": true,
+    "type": "number",
+    "format": "float",
+    "max": 500,
+    "min": 0,
+    "properties": {}
+  },
+  "PC_dcmaxdchgcur": {
+    "nickname": "PC_dcmaxdchgcur",
+    "comment": "直流支路1:最大放电电流",
+    "minLength": 0,
+    "maxLength": 500,
+    "show_frontend": true,
+    "type": "number",
+    "format": "float",
+    "max": 500,
+    "min": 0,
+    "properties": {}
+  },
+  "PC_sysboot": {
+    "nickname": "PC_sysboot",
+    "comment": "系统开机",
+    "minLength": 0,
+    "maxLength": 1,
+    "show_frontend": true,
+    "type": "select",
+    "format": "int",
+    "max": 1,
+    "min": 0,
+    "properties": {},
+    "list":[
+      { "value":"0","label":"System Powering"},
+      { "value":"1","label":"System Down"}
+    ]
+  },
+  "PC_sysdown": {
+    "nickname": "PC_sysdow",
+    "comment": "系统停机",
+    "minLength": 0,
+    "maxLength": 1,
+    "show_frontend": true,
+    "type": "select",
+    "format": "int",
+    "max": 1,
+    "min": 0,
+    "properties": {},
+    "list":[
+      { "value":"0","label":"System Powering"},
+      { "value":"1","label":"System Down"}
+    ]
+  },
+  "PC_sysclrf": {
+    "nickname": "PC_sysclrf",
+    "comment": "系统清除故障(PCS)",
+    "minLength": 0,
+    "maxLength": 1,
+    "show_frontend": true,
+    "type": "select",
+    "format": "int",
+    "max": 1,
+    "min": 0,
+    "properties": {},
+    "list":[
+      { "value":"0","label":"0"},
+      { "value":"1","label":"1"}
+    ]
+  }
+}

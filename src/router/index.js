@@ -21,6 +21,14 @@ const routes = [
             },
             {
                 path: "/home/device",
+                name: "HomeDevice",
+                meta: {
+                    title: 'Device',
+                },
+                component: () => import ( /* webpackChunkName: "dashboard" */ "../views/device/index.vue")
+            },
+            {
+                path: "/device",
                 name: "Device",
                 meta: {
                     title: 'Device',

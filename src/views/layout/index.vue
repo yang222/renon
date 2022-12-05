@@ -2,7 +2,7 @@
 	<div class="relative h-full w-full bg-[#F5F5F5]">
 		<div class="relative h-[285px] bg-[#000] z-0"></div>
 		<div class="absolute w-full h-full top-0 left-0 flex p-6 pb-0 pr-0">
-			<div class="bg-white top-6 left-6 bottom-6 h-full w-[250px] rounded-xl">
+			<div class="bg-white top-6 left-6 h-[calc(100vh-40px)] w-[250px] rounded-xl">
 				<v-sidebar />
 			</div>
 			<div class="content-box ml-6 w-[calc(100%-274px)] relative">

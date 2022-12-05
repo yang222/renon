@@ -1,0 +1,726 @@
+{
+  "I_reset": {
+    "nickname": "I_reset",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "I_Rengclr": {
+        "nickname": "Battery and runtime cleared ",
+        "comment": "电量及运行时间清零",
+        "minLength": 0,
+        "maxLength": 1,
+        "type": "number",
+        "format": "int",
+        "max": 1,
+        "min": 0,
+        "properties": ""
+      },
+      "I_Rfaultclr": {
+        "nickname": "Cleared error record",
+        "comment": "清除故障记录",
+        "minLength": 0,
+        "maxLength": 1,
+        "type": "number",
+        "format": "int",
+        "max": 1,
+        "min": 0,
+        "properties": ""
+      }
+    }
+  },
+  "I_funcen": {
+    "nickname": "I_funcen",
+    "minLength": 0,
+    "maxLength": 1,
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "I_Feps": {
+        "nickname": "Off grid mode enabled",
+        "comment": "离网模式使能",
+        "minLength": 0,
+        "maxLength": 1,
+        "type": "number",
+        "format": "int",
+        "max": 1,
+        "min": 0,
+        "properties": ""
+      },
+      "I_Fovfload": {
+        "nickname": "Overfrequency load reduction enabled",
+        "comment": "过频降载使能",
+        "minLength": 0,
+        "maxLength": 1,
+        "type": "number",
+        "format": "int",
+        "max": 1,
+        "min": 0,
+        "properties": ""
+      },
+      "I_Fdrms": {
+        "nickname": "DRMS enabled",
+        "comment": "DRMS使能",
+        "minLength": 0,
+        "maxLength": 1,
+        "type": "number",
+        "format": "int",
+        "max": 1,
+        "min": 0,
+        "properties": ""
+      },
+      "I_Facchg": {
+        "nickname": "AC charging enabled",
+        "comment": "AC充电使能",
+        "minLength": 0,
+        "maxLength": 1,
+        "type": "number",
+        "format": "int",
+        "max": 1,
+        "min": 0,
+        "properties": ""
+      },
+      "I_Fswsless": {
+        "nickname": "Off-grid mode seamlessly switched enabled",
+        "comment": "离网模式无缝切换使能",
+        "minLength": 0,
+        "maxLength": 1,
+        "type": "number",
+        "format": "int",
+        "max": 1,
+        "min": 0,
+        "properties": ""
+      },
+      "I_Fstandby": {
+        "nickname": "StandBy",
+        "comment": "0：待机1：开机",
+        "minLength": 0,
+        "maxLength": 1,
+        "type": "number",
+        "format": "int",
+        "max": 1,
+        "min": 0,
+        "properties": ""
+      },
+      "I_Forceddchg": {
+        "nickname": "Forced discharge enablement",
+        "comment": "强制放电使能",
+        "minLength": 0,
+        "maxLength": 1,
+        "type": "number",
+        "format": "int",
+        "max": 1,
+        "min": 0,
+        "properties": ""
+      },
+      "I_Forcedchg": {
+        "nickname": "Forced charge enablement",
+        "comment": "强制充电使能",
+        "minLength": 0,
+        "maxLength": 1,
+        "type": "number",
+        "format": "int",
+        "max": 1,
+        "min": 0,
+        "properties": ""
+      }
+    }
+  },
+  "I_startpvv": {
+    "nickname": "PV operating starting voltage",
+    "comment": "PV工作起始电压，AC储能无此变量",
+    "minLength": 900,
+    "maxLength": 5000,
+    "show_frontend": true,
+    "type": "number",
+    "format": "float",
+    "max": 5000,
+    "min": 900,
+    "unit": "V",
+    "properties": {
+    }
+  },
+  "I_conntime": {
+    "nickname": "Paralleled waiting time",
+    "comment": "并网等待时间",
+    "minLength": 30,
+    "maxLength": 600,
+    "show_frontend": true,
+    "type": "number",
+    "format": "int",
+    "max": 600,
+    "min": 30,
+    "unit": "s",
+    "properties": {
+    }
+  },
+  "I_reconntime": {
+    "nickname": "Re-Paralleled waiting time",
+    "comment": "重新并网等待时间",
+    "minLength": 0,
+    "maxLength": 900,
+    "show_frontend": true,
+    "type": "number",
+    "format": "int",
+    "max": 900,
+    "min": 0,
+    "unit": "s",
+    "properties": {
+    }
+  },
+  "I_chgpowper": {
+    "nickname": "Charging power percentage",
+    "comment": "充电功率百分比设定",
+    "minLength": 0,
+    "maxLength": 100,
+    "show_frontend": true,
+    "type": "number",
+    "format": "int",
+    "max": 100,
+    "min": 0,
+    "unit": "%",
+    "properties": {
+    }
+  },
+  "I_dchgpowper": {
+    "nickname": "Discharge power percentage",
+    "comment": "放电功率百分比设定",
+    "minLength": 0,
+    "maxLength": 100,
+    "show_frontend": true,
+    "type": "number",
+    "format": "int",
+    "max": 100,
+    "min": 0,
+    "unit": "%",
+    "properties": {
+    }
+  },
+  "I_acchg": {
+    "nickname": "I_acchg",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "I_Achgpow": {
+        "nickname": "AC charge percentage",
+        "comment": "AC充电百分比设定",
+        "minLength": 0,
+        "maxLength": 100,
+        "type": "number",
+        "format": "int",
+        "max": 100,
+        "min": 0,
+        "unit": "%",
+        "properties": ""
+      },
+      "I_Achgsoc": {
+        "nickname": "AC charging SOC limit",
+        "comment": "AC充电SOC限值设定",
+        "minLength": 0,
+        "maxLength": 100,
+        "type": "number",
+        "format": "int",
+        "max": 100,
+        "min": 0,
+        "unit": "%",
+        "properties": ""
+      },
+      "I_Achgstarth": {
+        "nickname": "AC charging start time_hours",
+        "comment": "AC充电起始时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "unit": "hour",
+        "properties": ""
+      },
+      "I_Achgstartm": {
+        "nickname": "AC charging start time_minute",
+        "comment": "AC充电起始时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "unit": "min",
+        "properties": ""
+      },
+      "I_Achgendh": {
+        "nickname": "AC charging end time_hours",
+        "comment": "AC充电结束时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "unit": "hour",
+        "properties": ""
+      },
+      "I_Achgendm": {
+        "nickname": "AC charging end time_minute",
+        "comment": "AC充电结束时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Achgstarth1": {
+        "nickname": "AC charging start time_hours1",
+        "comment": "AC充电起始时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "unit": "hour",
+        "properties": ""
+      },
+      "I_Achgstartm1": {
+        "nickname": "AC charging start time_minute1",
+        "comment": "AC充电起始时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Achgendh1": {
+        "nickname": "AC charging end time_hours1",
+        "comment": "AC充电结束时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Achgendm1": {
+        "nickname": "AC charging end time_minute1",
+        "comment": "AC充电结束时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Achgstarth2": {
+        "nickname": "AC charging start time_hours2",
+        "comment": "AC充电起始时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Achgstartm2": {
+        "nickname": "AC charging start time_minute2",
+        "comment": "AC充电起始时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "unit": "min",
+        "properties": ""
+      },
+      "I_Achgendh2": {
+        "nickname": "AC charging end time_hours2",
+        "comment": "AC充电结束时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Achgendm2": {
+        "nickname": "AC charging end time_minute2",
+        "comment": "AC充电结束时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      }
+    }
+  },
+  "I_chgfirst": {
+    "nickname": "I_chgfirst",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "I_Fchgpow": {
+        "nickname": "Charge priority percentage",
+        "comment": "充电优先百分比设定",
+        "minLength": 0,
+        "maxLength": 100,
+        "type": "number",
+        "format": "int",
+        "max": 100,
+        "min": 0,
+        "unit": "%",
+        "properties": ""
+      },
+      "I_Fchgsoc": {
+        "nickname": "Charge priority SOC limit",
+        "comment": "充电优先SOC限值设定",
+        "minLength": 0,
+        "maxLength": 100,
+        "type": "number",
+        "format": "int",
+        "max": 100,
+        "min": 0,
+        "unit": "%",
+        "properties": ""
+
+      },
+      "I_Fchgstarth": {
+        "nickname": "Charge priority start time_hour",
+        "comment": "充电优先起始时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Fchgstartm": {
+        "nickname": "Charge priority start time_minute",
+        "comment": "充电优先起始时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Fchgendh": {
+        "nickname": "Charge priority end time_hour",
+        "comment": "充电优先结束时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Fchgendm": {
+        "nickname": "Charge priority start time_hour",
+        "comment": "充电优先结束时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Fchgstarth1": {
+        "nickname": "Charge priority start time_hour1",
+        "comment": "充电优先起始时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Fchgstartm1": {
+        "nickname": "Charge priority start time_minute1",
+        "comment": "充电优先起始时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Fchgendh1": {
+        "nickname": "Charge priority end time_hour1",
+        "comment": "充电优先结束时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Fchgendm1": {
+        "nickname": "Charge priority end time_minute1",
+        "comment": "充电优先结束时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Fchgstarth2": {
+        "nickname": "Charge priority start time_hour2",
+        "comment": "充电优先起始时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Fchgstartm2": {
+        "nickname": "Charge priority start time_minute2",
+        "comment": "充电优先起始时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Fchgendh2": {
+        "nickname": "Charge priority end time_hour2",
+        "comment": "充电优先结束时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Fchgendm2": {
+        "nickname": "Charge priority end time_minute2",
+        "comment": "充电优先结束时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+
+      }
+    }
+  },
+  "I_forceddchg": {
+    "nickname": "I_forceddchg",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "I_Fdchgpow": {
+        "nickname": "Force discharge percentage",
+        "comment": "强制放电百分比设定",
+        "minLength": 0,
+        "maxLength": 100,
+        "type": "number",
+        "format": "int",
+        "max": 100,
+        "min": 0,
+        "properties": "",
+        "unit": "%"
+      },
+      "I_Fdchgsoc": {
+        "nickname": "Forced discharge SOC limit",
+        "comment": "强制放电SOC限值设定",
+        "minLength": 0,
+        "maxLength": 100,
+        "type": "number",
+        "format": "int",
+        "max": 100,
+        "min": 0,
+        "properties": "",
+        "unit": "%"
+      },
+      "I_Fdchgstarth": {
+        "nickname": "Forced discharge start time_hours",
+        "comment": "强制放电起始时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Fdchgstartm": {
+        "nickname": "Forced discharge start time_minutes",
+        "comment": "强制放电起始时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Fdchgendh": {
+        "nickname": "Forced discharge end time_hours",
+        "comment": "强制放电结束时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Fdchgendm": {
+        "nickname": "Forced discharge end time_minutes",
+        "comment": "强制放电结束时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Fdchgstarth1": {
+        "nickname": "Forced discharge start time_hours1",
+        "comment": "强制放电起始时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Fdchgstartm1": {
+        "nickname": "Forced discharge start time_minutes1",
+        "comment": "强制放电起始时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Fdchgendh1": {
+        "nickname": "Forced discharge end time_hours1",
+        "comment": "强制放电结束时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Fdchgendm1": {
+        "nickname": "Forced discharge end time_minutes1",
+        "comment": "强制放电结束时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Fdchgstarth2": {
+        "nickname": "Forced discharge start time_hours2",
+        "comment": "强制放电起始时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+
+      },
+      "I_Fdchgstartm2": {
+        "nickname": "Forced discharge start time_minutes2",
+        "comment": "强制放电起始时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      },
+      "I_Fdchgendh2": {
+        "nickname": "Forced discharge end time_hours2",
+        "comment": "强制放电结束时间_小时设置",
+        "minLength": 0,
+        "maxLength": 23,
+        "type": "number",
+        "format": "int",
+        "max": 23,
+        "min": 0,
+        "properties": "",
+        "unit": "hour"
+      },
+      "I_Fdchgendm2": {
+        "nickname": "Forced discharge end time_minutes2",
+        "comment": "强制放电结束时间_分钟设置",
+        "minLength": 0,
+        "maxLength": 59,
+        "type": "number",
+        "format": "int",
+        "max": 59,
+        "min": 0,
+        "properties": "",
+        "unit": "min"
+      }
+    }
+  }
+}

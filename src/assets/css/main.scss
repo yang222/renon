@@ -265,21 +265,21 @@ a {
 }
 .el-input-number{
     border: none;
-    width: 86px !important;
-    line-height: 20px !important;
+    width: 100px !important;
+    line-height: 24px !important;
     margin: 0 !important;
     .el-input__wrapper{
         padding: 0 30px !important;
         width: 100px !important;
         box-shadow: 0 0 0 0px var(--el-input-bphporder-color, var(--el-border-color)) inset !important;
         .el-input__inner{
-            height: 20px !important;
+            height: 24px !important;
         }
     }
    
     .el-input-number__decrease,.el-input-number__increase{
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
         background: #E0E0E0;
         
         border-radius: 2px;
@@ -300,5 +300,13 @@ a {
     .el-dialog__header{
         border-bottom: 0;
         height: 50px;
+    }
+}
+
+.el-message-box__btns{
+    .el-button--primary{
+        background: #409eff !important;
+        border: none !important;
+        outline: none !important;
     }
 }

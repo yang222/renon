@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#F5F5F5] overflow-y-auto h-full ">
+  <div class="bg-[#F5F5F5] overflow-y-auto h-[100vh]">
     <div class="relative h-[400px] z-10">
       <img
         src="@/assets/images/login-bg.jpg"
@@ -40,9 +40,18 @@
           <el-input
             v-model="form.password"
             size="large"
-            type="password"
-            placeholder="User"
-          />
+            :type="!showPw?'password':'text'"
+            placeholder="Password"
+          >
+          <template #suffix>
+                <div class="cursor-pointer" @click="showPw = !showPw">
+                  <el-icon v-if="showPw" class="el-input__icon"
+                    ><View
+                  /></el-icon>
+                  <el-icon v-else class="el-input__icon"><Hide /></el-icon>
+                </div>
+              </template>
+          </el-input>
         </div>
 
         <div class="flex justify-between items-center">
@@ -79,7 +88,7 @@
           Please contact your superior user to reset the password
         </p>
       </div>
-    <div class="z-1 text-center w-full left-0">
+    <div class="z-1 text-center fixed bottom-0 w-full left-0">
       <a href="https://www.renonpower.com/" target="_blank"><img
         src="@/assets/images/logo.png"
         class="w-[170px] h-auto block mx-auto"
@@ -102,10 +111,15 @@
 <script setup>
 import { reactive, ref } from "vue";
 import { Login } from "@/api"
+import { useRouter } from "vue-router";
+import { ElMessage } from "element-plus";
+
 const ruleFormRef = ref();
-const checked = ref([])
+const router = useRouter()
+const checked = ref(localStorage.getItem("username")?['Remember']:[])
+const showPw = ref(false);
 const form = reactive({
-  username: "",
+  username: localStorage.getItem("username") || '',
   password: "",
 });
 const showForgot = ref(false);
@@ -124,8 +138,24 @@ const submitForm = async (formEl) => {
     ElMessage.error("Please enter a password")
     return 
   }
-  Login(form).then(res=>{
-
+  Login({
+    username:form.username+"@RENON",
+    password:form.password
+  }).then(res=>{
+    if(checked.value.length){
+      localStorage.setItem("username",form.username);
+    }else{
+      localStorage.setItem("username",'');
+    }
+    localStorage.setItem("jwt",res.jwt)
+    localStorage.setItem("account",form.username)
+    localStorage.setItem("user_info",JSON.stringify(res.data))
+    ElMessage.success("Login succeeded!")
+    setTimeout(() => {
+      router.push("/home")
+    }, 1000);
+  }).catch(err=>{
+    ElMessage.error("Login failed,Please enter the correct account and password");
   })
 };
 </script>

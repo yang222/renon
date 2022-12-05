@@ -1,0 +1,481 @@
+{
+  "DI_modnum": {
+    "nickname": "Module Quantity",
+    "comment": "模块数量配置",
+    "show_frontend": true,
+    "type": "number",
+    "format": "int",
+    "max": 10,
+    "min": 0,
+    "properties": {
+    }
+  },
+  "DI_socoff": {
+    "nickname": "Discharge cut-off SOC",
+    "comment": "放到截至SOC",
+    "minLength": 0,
+    "maxLength": 100,
+    "show_frontend": true,
+    "type": "number",
+    "format": "float",
+    "max": 20,
+    "min": 0,
+    "unit": "%",
+    "properties": {
+    }
+  },
+  "DI_socrev": {
+    "nickname": "Discharge recovery SOC",
+    "comment": "放到恢复SOC",
+    "minLength": 0,
+    "maxLength": 100,
+    "show_frontend": true,
+    "type": "number",
+    "format": "float",
+    "max": 25,
+    "min": 0,
+    "unit": "%",
+    "properties": {
+    }
+  },
+  "DI_M1set": {
+    "nickname": "module 1",
+    "comment": "模块设置参数",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "DI_M1maxoutv": {
+        "nickname": "Output voltage1",
+        "comment": "模块最大输出电压",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "V"
+      },
+      "DI_M1maxoutc": {
+        "nickname": "Output current1",
+        "comment": "模块最大输出电流",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "A"
+      },
+      "DI_M1off": {
+        "nickname": "Shutdown1",
+        "comment": "模块关机",
+        "type": "number",
+        "format": "int",
+        "properties": ""
+      },
+      "DI_M1grpno": {
+        "nickname": "Group1",
+        "comment": "组别(DC可分组并联)",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 64,
+        "min": 0
+      }
+    }
+  },
+  "DI_M2set": {
+    "nickname": "module 2",
+    "comment": "模块设置参数",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "DI_M2maxoutv": {
+        "nickname": "Output voltage2",
+        "comment": "模块最大输出电压",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "V"
+      },
+      "DI_M2maxoutc": {
+        "nickname": "Output current2",
+        "comment": "模块最大输出电流",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "A"
+      },
+      "DI_M2off": {
+        "nickname": "Shutdown2",
+        "comment": "模块关机",
+        "type": "number",
+        "format": "int",
+        "properties": ""
+      },
+      "DI_M2grpno": {
+        "nickname": "Group2",
+        "comment": "组别(DC可分组并联)",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 64,
+        "min": 0
+      }
+    }
+  },
+  "DI_M3set": {
+    "nickname": "module 3",
+    "comment": "模块设置参数",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "DI_M3maxoutv": {
+        "nickname": "Output voltage3",
+        "comment": "模块最大输出电压",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "V"
+      },
+      "DI_M3maxoutc": {
+        "nickname": "Output current3",
+        "comment": "模块最大输出电流",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "A"
+      },
+      "DI_M3off": {
+        "nickname": "Shutdown3",
+        "comment": "模块关机",
+        "type": "number",
+        "format": "int",
+        "properties": ""
+      },
+      "DI_M3grpno": {
+        "nickname": "Group3",
+        "comment": "组别(DC可分组并联)",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 64,
+        "min": 0
+      }
+    }
+  },
+  "DI_M4set": {
+    "nickname": "module 4",
+    "comment": "模块设置参数",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "DI_M4maxoutv": {
+        "nickname": "Output voltage4",
+        "comment": "模块最大输出电压",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "V"
+      },
+      "DI_M4maxoutc": {
+        "nickname": "Output current4",
+        "comment": "模块最大输出电流",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "A"
+      },
+      "DI_M4off": {
+        "nickname": "Shutdown4",
+        "comment": "模块关机",
+        "type": "number",
+        "format": "int",
+        "properties": ""
+      },
+      "DI_M4grpno": {
+        "nickname": "Group4",
+        "comment": "组别(DC可分组并联)",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 64,
+        "min": 0
+      }
+    }
+  },
+  "DI_M5set": {
+    "nickname": "module 5",
+    "comment": "模块设置参数",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "DI_M5maxoutv": {
+        "nickname": "Output voltage5",
+        "comment": "模块最大输出电压",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "V"
+      },
+      "DI_M5maxoutc": {
+        "nickname": "Output current5",
+        "comment": "模块最大输出电流",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "A"
+      },
+      "DI_M5off": {
+        "nickname": "Shutdown5",
+        "comment": "模块关机",
+        "type": "number",
+        "format": "int",
+        "properties": ""
+      },
+      "DI_M5grpno": {
+        "nickname": "Group5",
+        "comment": "组别(DC可分组并联)",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 64,
+        "min": 0
+      }
+    }
+  },
+  "DI_M6set": {
+    "nickname": "module 6",
+    "comment": "模块设置参数",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "DI_M6maxoutv": {
+        "nickname": "Output voltage6",
+        "comment": "模块最大输出电压",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "V"
+      },
+      "DI_M6maxoutc": {
+        "nickname": "Output current6",
+        "comment": "模块最大输出电流",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "A"
+      },
+      "DI_M6off": {
+        "nickname": "Shutdown6",
+        "comment": "模块关机",
+        "type": "number",
+        "format": "int",
+        "properties": ""
+      },
+      "DI_M6grpno": {
+        "nickname": "Group6",
+        "comment": "组别(DC可分组并联)",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 64,
+        "min": 0
+      }
+    }
+  },
+  "DI_M7set": {
+    "nickname": "module 7",
+    "comment": "模块设置参数",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "DI_M7maxoutv": {
+        "nickname": "Output voltage7",
+        "comment": "模块最大输出电压",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "V"
+      },
+      "DI_M7maxoutc": {
+        "nickname": "Output current7",
+        "comment": "模块最大输出电流",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "A"
+      },
+      "DI_M7off": {
+        "nickname": "Shutdown7",
+        "comment": "模块关机",
+        "type": "number",
+        "format": "int",
+        "properties": ""
+      },
+      "DI_M7grpno": {
+        "nickname": "Group7",
+        "comment": "组别(DC可分组并联)",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 64,
+        "min": 0
+      }
+    }
+  },
+  "DI_M8set": {
+    "nickname": "module 8",
+    "comment": "模块设置参数",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "DI_M8maxoutv": {
+        "nickname": "Output voltage8",
+        "comment": "模块最大输出电压",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "V"
+      },
+      "DI_M8maxoutc": {
+        "nickname": "Output current8",
+        "comment": "模块最大输出电流",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "A"
+      },
+      "DI_M8off": {
+        "nickname": "Shutdown8",
+        "comment": "模块关机",
+        "type": "number",
+        "format": "int",
+        "properties": ""
+      },
+      "DI_M8grpno": {
+        "nickname": "Group8",
+        "comment": "组别(DC可分组并联)",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 64,
+        "min": 0
+      }
+    }
+  },
+  "DI_M9set": {
+    "nickname": "module 9",
+    "comment": "模块设置参数",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "DI_M9maxoutv": {
+        "nickname": "Output voltage9",
+        "comment": "模块最大输出电压",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "V"
+      },
+      "DI_M9maxoutc": {
+        "nickname": "Output current9",
+        "comment": "模块最大输出电流",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "A"
+      },
+      "DI_M9off": {
+        "nickname": "Shutdown9",
+        "comment": "模块关机",
+        "type": "number",
+        "format": "int",
+        "properties": ""
+      },
+      "DI_M9grpno": {
+        "nickname": "Group9",
+        "comment": "组别(DC可分组并联)",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 64,
+        "min": 0
+      }
+    }
+  },
+  "DI_M10set": {
+    "nickname": "module 10",
+    "comment": "模块设置参数",
+    "show_frontend": true,
+    "type": "object",
+    "properties": {
+      "DI_M10maxoutv": {
+        "nickname": "Output voltage10",
+        "comment": "模块最大输出电压",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "V"
+      },
+      "DI_M10maxoutc": {
+        "nickname": "Output current10",
+        "comment": "模块最大输出电流",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 1000,
+        "min": 150,
+        "unit": "A"
+      },
+      "DI_M10off": {
+        "nickname": "Shutdown10",
+        "comment": "模块关机",
+        "type": "number",
+        "format": "int",
+        "properties": ""
+      },
+      "DI_M10grpno": {
+        "nickname": "Group10",
+        "comment": "组别(DC可分组并联)",
+        "type": "number",
+        "format": "int",
+        "properties": "",
+        "max": 64,
+        "min": 0
+      }
+    }
+  }
+}
